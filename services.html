@@ -25,6 +25,15 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JavaScript (jQuery and Popper.js required) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" /> -->
 
@@ -79,7 +88,9 @@
               <div class="pull-left logo-box">
                 <div class="logo">
                   <a href="https://argantechnology.com/"
-                    ><img src="images/logo-3.png" alt="" title=""
+                    ><img src="images/logo-3.png" alt="" title="" style="
+                    width: 55%;
+                "
                   /></a>
                 </div>
               </div>
@@ -232,7 +243,7 @@
                 <!-- Options Box -->
                 <div class="options-box clearfix">
                   <div class="btn-box">
-                    <a href="#" class="theme-btn btn-style-five"
+                    <a href="#" id="customOpenPopup" class="theme-btn btn-style-five"
                       ><span class="txt">Contact Now</span></a
                     >
                   </div>
@@ -295,6 +306,158 @@
         </div>
       </section>
       <!--End Page Title-->
+      <section class="services-page-section">
+        <div class="auto-container">
+          <div class="custom-popup-wrapper" id="customPopupWrapper">
+            <div class="custom-popup-content">
+              <button class="custom-close-btn" id="customClosePopup">&times;</button>
+              <h2>Contact Now</h2>
+              <form
+                id="customContactForm"
+                class="custom-contact-form"
+                action="#"
+                method="post"
+              >
+                <label for="customName">Your Name:</label>
+                <input
+                  type="text"
+                  id="customName"
+                  name="customName"
+                  maxlength="15"
+                  required
+                /><br />
+      
+                <label for="customPhone">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="customPhone"
+                  name="customPhone"
+                  pattern="[0-9]{10}"
+                  required
+                /><br />
+      
+                <label for="customEmail">Email Address:</label>
+                <input
+                  type="email"
+                  id="customEmail"
+                  name="customEmail"
+                  required
+                /><br />
+      
+                <label for="customLocation">Your Current Location:</label>
+                <input
+                  type="text"
+                  id="customLocation"
+                  name="customLocation"
+                  maxlength="50"
+                  required
+                /><br />
+      
+                <label for="customOrganization">Your Organization Details:</label>
+                <input
+                  type="text"
+                  id="customOrganization"
+                  name="customOrganization"
+                  maxlength="20"
+                /><br />
+      
+                <label for="customRequirements">Specify Your Requirements:</label>
+                <textarea
+                  id="customRequirements"
+                  name="customRequirements"
+                  rows="4"
+                  maxlength="200"
+                  required
+                ></textarea
+                ><br />
+      
+                <label for="customCallTime">Good Time to Call:</label>
+                <input
+                  type="text"
+                  id="customCallTime"
+                  name="customCallTime"
+                  maxlength="15"
+                /><br />
+      
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <style>
+            .custom-popup-wrapper {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 1000;
+              overflow-y: auto;
+            }
+      
+            .custom-popup-content {
+              background-color: #fff;
+              margin: 50px auto;
+              padding: 20px;
+              max-width: 80%;
+            }
+      
+            .custom-close-btn {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: none;
+              border: none;
+              font-size: 20px;
+              cursor: pointer;
+            }
+      
+            .custom-contact-form input[type="text"],
+            .custom-contact-form input[type="email"],
+            .custom-contact-form input[type="tel"],
+            .custom-contact-form textarea {
+              width: 100%;
+              padding: 8px;
+              margin-bottom: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+            }
+      
+            .custom-contact-form textarea {
+              resize: vertical;
+            }
+      
+            .custom-contact-form button {
+              background-color: #4caf50;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+      
+            .custom-contact-form button:hover {
+              background-color: #45a049;
+            }
+          </style>
+          <script>
+            const customOpenPopupBtn = document.getElementById("customOpenPopup");
+            const customClosePopupBtn = document.getElementById("customClosePopup");
+            const customPopupWrapper = document.getElementById("customPopupWrapper");
+      
+            customOpenPopupBtn.addEventListener("click", () => {
+              customPopupWrapper.style.display = "block";
+            });
+      
+            customClosePopupBtn.addEventListener("click", () => {
+              customPopupWrapper.style.display = "none";
+            });
+          </script>
+        </div>
+      </section>
 
       <!-- Services Page Section -->
       <section class="services-page-section">
@@ -1141,108 +1304,6 @@
         </div>
       </div>
 
-      <!-- Quote Section -->
-      <section class="quote-section style-two">
-        <div class="color-layer"></div>
-        <div class="auto-container">
-          <div class="row clearfix">
-            <!-- Form Column -->
-            <div class="form-column col-lg-5 col-md-12 col-sm-12">
-              <div class="inner-column">
-                <h2>Get a free <span>quote.</span></h2>
-
-                <!-- Default Form -->
-                <div class="default-form">
-                  <form method="post" action="blog.html">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="username"
-                        placeholder="Your Name"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your Phone"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <select class="custom-select-box">
-                        <option>Choose Your Services</option>
-                        <option>Service One</option>
-                        <option>Service Two</option>
-                        <option>Service Three</option>
-                        <option>Service Four</option>
-                        <option>Service Five</option>
-                      </select>
-                    </div>
-
-                    <div class="form-group">
-                      <button
-                        class="theme-btn btn-style-five"
-                        type="submit"
-                        name="submit-form"
-                      >
-                        <span class="txt">More Discover</span>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <!-- Content Column -->
-            <div class="content-column col-lg-7 col-md-12 col-sm-12">
-              <div class="inner-column">
-                <!-- Sec Title -->
-                <div class="sec-title">
-                  <h2>
-                    See Our feature <br />
-                    why you choose the <span>Moran</span>
-                  </h2>
-                  <div class="text">
-                    We are committed to providing our customers with exceptional
-                    service while offering our employees the best training.
-                  </div>
-                </div>
-                <ul class="numbering-list">
-                  <li>
-                    <span class="number">01</span
-                    ><strong>PROFESSIONAL STAFF</strong>There are many
-                    variations of passages of majority have suffered.
-                  </li>
-                  <li>
-                    <span class="number">02</span
-                    ><strong>100% SATISFACTION</strong>There are many variations
-                    of passages of majority have suffered.
-                  </li>
-                  <li>
-                    <span class="number">03</span
-                    ><strong>QUALITY DESIGNING</strong>There are many variations
-                    of passages of majority have suffered.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Quote Section -->
 
       <!-- CTA Section Two -->
       <section class="cta-section-two">
@@ -1257,15 +1318,23 @@
                 <h3>Experience the next level Software development with us </h3>
               </div>
               <div class="pull-right">
-                <a href="about.html" class="theme-btn btn-style-four"
-                  ><span class="txt">Contact Now</span></a
-                >
+                <div class="popup-wrapper">
+                <div class="btn-box">
+                    <a href="#" id="customOpenPopup" class="theme-btn btn-style-five"
+                      ><span class="txt">Contact Now</span></a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- End CTA Section -->
+
+
+
+
 
       <!-- Main Footer -->
       <footer
@@ -1284,11 +1353,11 @@
                     <div class="footer-widget logo-widget">
                       <div class="logo">
                         <a href="index.html"
-                          ><img src="images/logo-2.png" alt=""
+                          ><img src="images/logo-2.png" alt="" 
                         /></a>
                       </div>
                       <div class="text">
-                        Welcome to our web design Morancy. Lorem ipsum simply
+                        Welcome to our web design Argan Technologycy. Lorem ipsum simply
                         free text dolor sited amet cons cing elit.
                       </div>
                       <!-- Social Box -->
@@ -1446,7 +1515,7 @@
                         <span class="icon fa fa-phone"></span>(111) 111-111-1111
                       </li>
                       <li>
-                        <span class="icon fa fa-envelope"></span>Moran@gmail.com
+                        <span class="icon fa fa-envelope"></span>Argan Technology@gmail.com
                       </li>
                       <li>
                         <span class="icon fa fa-clock-o"></span>Week Days: 09.00
