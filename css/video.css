@@ -1,0 +1,99 @@
+/*-----------------------------slider------------------------------------*/
+.rev_slider .caption, .rev_slider .tp-caption.title-1{
+    font-family:"Poppins-Light"!important;
+}
+.tp-caption.titel-1{
+    font-family:"Poppins-Bold"!important;
+    word-spacing:5px;
+}
+.tp-caption.titel-2{
+    font-family:"Rubik-Regular"!important;
+}
+.tp-caption.titel-2-new{
+    font-family:"Rubik-Light"!important;
+}
+.tp-caption.title-3 {
+    font-family:"Rubik-Regular"!important;
+}
+@media screen and (max-width: 768px){
+    .rev_slider{
+   }
+}
+.tp-caption ul{ padding:0px;}
+.tp-caption ul li .btn1{
+    font-family:"Poppins-Semibold";
+    background:#254b94;
+    text-transform:uppercase;
+    color:#fff;
+    padding:10px 35px;
+    border-radius:50px;
+    border:2px solid #254b94;
+}
+.tp-caption ul{
+    padding:0px;
+}
+.tp-caption ul li .btn1:hover{
+    color:#fff;
+    background:transparent;
+    border:2px solid #fff;
+}
+.tp-caption ul li .btn2{
+    font-family:"Poppins-Semibold";
+    background:transparent;
+    text-transform:uppercase;
+    color:#fff;
+    padding:10px 35px;
+    border-radius:50px;
+    border:2px solid #fff;
+}
+.tp-caption ul li .btn2:hover{
+    color:#fff;
+    background:#254b94;
+    border:2px solid #254b94;
+}
+.tp-caption ul li .btn1.in{
+    font-family:"Poppins-Semibold";
+    background:#254b94;
+    text-transform:uppercase;
+    color:#fff;
+    padding:10px 35px;
+    border-radius:50px;
+    border:2px solid #254b94;
+}
+.tp-caption ul li .btn1.in:hover{
+    background:transparent;
+    border:2px solid #1e2a40;
+    color:#1e2a40;
+}
+.tp-caption ul li .btn2.in{
+    font-family:"Poppins-Semibold";
+    background:transparent;
+    text-transform:uppercase;
+    color:#1e2a40;
+    padding:10px 35px;
+    border-radius:50px;
+    border:2px solid #1e2a40;
+}
+.tp-caption ul li .btn2.in:hover{
+    color:#fff;
+    background:#254b94;
+    border:2px solid #254b94;
+}
+.tp-caption ul li{
+    padding:0px 10px;
+}
+.tp-caption ul li a{
+    text-decoration:none;
+}
+.rev_slider .tp-caption .fa-check{
+    margin-right:20px!important;
+    margin-top:5px;
+    font-size:28px;
+    color:#e22e13!important;
+}
+@media screen and (max-width: 768px){
+    .tp-bullets.uranus{
+        display:none;
+   }
+}
+/*-----------------------------slider------------------------------------*/

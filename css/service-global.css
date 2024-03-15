@@ -1,0 +1,23 @@
+.solution-block.style-two .inner-box {
+  border-radius: 18px 18px;
+}
+.service-img img {
+  width: 20px;
+  margin: 0% 3%;
+}
+
+.flaticon-seo-2:before {
+  content: url("../images/coding-language.png");
+}
+.flaticon-campaign-2:before {
+  content: url("../images/framework.png");
+}
+.flaticon-graphic-design-2:before {
+  content: url("../images/database-storage.png");
+}
+.flaticon-layout-2:before {
+  content: url("../images/merge.png");
+}
+.flaticon-layout-3:before {
+  content: url("../images/server.png");
+}
