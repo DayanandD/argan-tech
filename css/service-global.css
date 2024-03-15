@@ -21,3 +21,7 @@
 .flaticon-layout-3:before {
   content: url("../images/server.png");
 }
+
+.img-industry {
+  width: 50% !important;
+}
