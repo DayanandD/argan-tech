@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Popup Model</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="custom-popup-wrapper" id="customPopupWrapper">
+      <div class="custom-popup-content">
+        <button class="custom-close-btn" id="customClosePopup">&times;</button>
+        <h2>Contact Now</h2>
+        <form
+          id="customContactForm"
+          class="custom-contact-form"
+          action="#"
+          method="post"
+        >
+          <label for="customName">Your Name:</label>
+          <input
+            type="text"
+            id="customName"
+            name="customName"
+            maxlength="15"
+            required
+          /><br />
+
+          <label for="customPhone">Phone Number:</label>
+          <input
+            type="tel"
+            id="customPhone"
+            name="customPhone"
+            pattern="[0-9]{10}"
+            required
+          /><br />
+
+          <label for="customEmail">Email Address:</label>
+          <input
+            type="email"
+            id="customEmail"
+            name="customEmail"
+            required
+          /><br />
+
+          <label for="customLocation">Your Current Location:</label>
+          <input
+            type="text"
+            id="customLocation"
+            name="customLocation"
+            maxlength="50"
+            required
+          /><br />
+
+          <label for="customOrganization">Your Organization Details:</label>
+          <input
+            type="text"
+            id="customOrganization"
+            name="customOrganization"
+            maxlength="20"
+          /><br />
+
+          <label for="customRequirements">Specify Your Requirements:</label>
+          <textarea
+            id="customRequirements"
+            name="customRequirements"
+            rows="4"
+            maxlength="200"
+            required
+          ></textarea
+          ><br />
+
+          <label for="customCallTime">Good Time to Call:</label>
+          <input
+            type="text"
+            id="customCallTime"
+            name="customCallTime"
+            maxlength="15"
+          /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <button id="customOpenPopup">Contact Now</button>
+
+    <style>
+      .custom-popup-wrapper {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .custom-popup-content {
+        background-color: #fff;
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 80%;
+      }
+
+      .custom-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .custom-contact-form input[type="text"],
+      .custom-contact-form input[type="email"],
+      .custom-contact-form input[type="tel"],
+      .custom-contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .custom-contact-form textarea {
+        resize: vertical;
+      }
+
+      .custom-contact-form button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .custom-contact-form button:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <script>
+      const customOpenPopupBtn = document.getElementById("customOpenPopup");
+      const customClosePopupBtn = document.getElementById("customClosePopup");
+      const customPopupWrapper = document.getElementById("customPopupWrapper");
+
+      customOpenPopupBtn.addEventListener("click", () => {
+        customPopupWrapper.style.display = "block";
+      });
+
+      customClosePopupBtn.addEventListener("click", () => {
+        customPopupWrapper.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
